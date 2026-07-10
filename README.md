@@ -87,7 +87,7 @@ gpt에게 일 제대로 시키기 abc
 |모델/환경 기록, 무료 버전 제한점| [03_conversation_log.md](./03_conversation_log.md) | 비교에 사용한 동일 입력 ,10턴 이상 대화 전문 |
 | 안전/윤리 개인정보,폭력/선정적 콘텐츠,사실/정책/수치 포함된 답변 근거/확인 필요 | [03_conversation_log.md](./03_conversation_log.md) | 시스템 프롬프트  |
 | 제출문 편집 섹션/번호/요약,원본첨부 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문  |
-| 보너스| [03_conversation_log.md](./03_conversation_log.md) |  |
+| 보너스| [03_conversation_log.md](./bonus/.png) |  |
 ---
 
 모든 실험은 동일 시스템 프롬프트·동일 대본·동일 설정(Together AI Playground)으로 수행하여

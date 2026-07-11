@@ -1,36 +1,40 @@
 # 01. 모델 비교 및 선정
 
-> 목표: 클레임처리GPT 과업(한국어 업무 문서 · 형식 준수 · 환각 억제)에 가장 적합한 모델을 중국 오픈웨이트 모델 중에서 찾아보자.
+> 목표: 클레임처리GPT 과업(한국어 업무 문서 · 형식 준수 · 환각 억제)에 가장 적합한 모델을
 > **동일 대본 실측**으로 선정한
 
 ## 1. 비교목적
-
-2026년 상반기(2~6월) 동세대 모델로 통제하여 "세대 차이"가 "모델 차이"로 오염되는 것을 방지했다.
+사무자동화에 활용할 챗봇을 만
+저렴하게 사용 할 수 있는 중국 오픈웨이트 모델들 중  
+세대차이로 모델간 차이가 벌어지지
+2026년 상반기(2~6월) 동세대 모델을 비교 하기로 했다.
 
 | 모델 | 개발사 | 출시일 | 체급/역할 | 공개 형태 |
 | --- | --- | --- | --- | --- |
 | GLM 5.2 | Z.ai (Zhipu) | 2026-06-13 | 플래그십 기준점 | 오픈웨이트 (MIT) |
 | Kimi K2.6 | Moonshot AI | 2026-04-20 | 플래그십 (범용) | 오픈웨이트 (수정 MIT) |
-|| Kimi K2.6 | DeepSeek | 2026-04-24 | 플래그십 | 오픈웨이트 (MIT) |
+| DeepSeek V4 Pro | DeepSeek | 2026-04-24 | 플래그십 | 오픈웨이트 (MIT) |
 
 2026년 상반기(4~6월) 동세대 플래그십 3종, 연구소당 1개.
 
-## 2. 실험 환경
-
+## 2. 비교에 사용한 동일한 입력
+###실행환경
 - 채널: [Together ai Playground](https://api.together.ai/playground) (전 모델 동일. )
-- 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02](./02_system_design.md) 참조)
+	 세 모델모두 중국 오픈웨이트 모델을 직접 호스팅 하는 togetherAI에서 제공하는 버전을 사용하였습니다.
+	 제3자가 제공하는 모델을 이용하는 편이 원본 서비스보다 개인정보문제나 
 - 실행일: 2026-07-10
 
 ### 실행 설정값 (Together AI)
+*together AI가 디폴트 파라메터 값을 제공하지 않았기 때문에
 | 모델 | Max Tokens,Temperature | 기타 파라메터 |
 | --- | --- | --- |
-| GLM 5.2 | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png) |
-| Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png) |
-| Kimi K2.6 | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
+| GLM 5.2 | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1-cut.png) [glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) | ![glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2-cut.png) [glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png)|
+| Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1-cut.png) [kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2-cut.png) [mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)|
+| DeepSeek V4 Pro | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1-cut.png) [deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2-cut.png) [deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
+###시스템프롬프트 유저프롬프트
+- 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02](./02_system_design.md) 참조)
 
 #### 파라메터 설명
-
-
 | 설정 항목 | 설명 | 설정값 | 이유 |
 | --- | --- | --- | --- |
 | Max Tokens | 출력 최대 토큰 수 (1~262,144) | 65536 | 추론 트레이스 포함 출력이 상한에 잘리지 않도록 확보. 예비 실행에서 16,384 초과(추론 폭주) 관측 후 상향 |

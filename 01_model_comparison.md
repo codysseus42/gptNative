@@ -11,7 +11,7 @@
 | --- | --- | --- | --- | --- |
 | GLM 5.2 | Z.ai (Zhipu) | 2026-06-13 | 플래그십 기준점 | 오픈웨이트 (MIT) |
 | Kimi K2.6 | Moonshot AI | 2026-04-20 | 플래그십 (범용) | 오픈웨이트 (수정 MIT) |
-| DeepSeek V4 Pro | DeepSeek | 2026-04-24 | 플래그십 | 오픈웨이트 (MIT) |
+|| Kimi K2.6 | DeepSeek | 2026-04-24 | 플래그십 | 오픈웨이트 (MIT) |
 
 2026년 상반기(4~6월) 동세대 플래그십 3종, 연구소당 1개.
 
@@ -22,10 +22,11 @@
 - 실행일: 2026-07-10
 
 ### 실행 설정값 (Together AI)
-
-![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png)
-![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) ![kimi 실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)
-![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png)
+| 모델 | Max Tokens,Temperature | 기타 파라메터 |
+| --- | --- | --- |
+| GLM 5.2 | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png) |
+| Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png) |
+| Kimi K2.6 | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
 
 #### 추정값(Open Router)
 

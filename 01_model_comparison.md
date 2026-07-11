@@ -1,9 +1,9 @@
 # 01. 모델 비교 및 선정
 
-> 목표: 클레임처리GPT 과업(한국어 업무 문서 · 형식 준수 · 환각 억제)에 가장 적합한 모델을
-> **동일 대본 실측**으로 선정한다. 벤더 벤치마크는 참고만 하고, 판정 근거는 직접 실행 결과로 한정한다.
+> 목표: 클레임처리GPT 과업(한국어 업무 문서 · 형식 준수 · 환각 억제)에 가장 적합한 모델을 중국 오픈웨이트 모델 중에서 찾아보자.
+> **동일 대본 실측**으로 선정한
 
-## 1. 후보 모델과 선정 근거
+## 1. 비교목적
 
 2026년 상반기(2~6월) 동세대 모델로 통제하여 "세대 차이"가 "모델 차이"로 오염되는 것을 방지했다.
 
@@ -28,7 +28,7 @@
 | Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png) |
 | Kimi K2.6 | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
 
-#### 추정값(Open Router)
+#### 파라메터 설명
 
 
 | 설정 항목 | 설명 | 설정값 | 이유 |

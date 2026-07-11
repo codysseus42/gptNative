@@ -45,7 +45,7 @@ gpt에게 일 제대로 시키기 abc
 | `02_system_design.md` | 시스템 프롬프트 설계 의도 · 입력 템플릿 · Few-shot 예시 3종 · 되묻기(확인질문) 설계 · v1→v2 개선 | [02_system_design.md](./02_system_design.md) |
 | `03_conversation_log.md` | 선정 모델 실행 로그(10턴+) · 조건 변경 2회(내용/어조) 반영 검증 | [03_conversation_log.md](./03_conversation_log.md) |
 
-시스템 프롬프트 전문: [systemprompt_v1.md](./systemprompt_v1.md) · [systemprompt_v2.md](./systemprompt_v2.md)
+시스템 프롬프트 전문: [systemprompt_v1.md](./systemprompt_v1.md) · [systemprompt_v2.md](./systemprompt.md)
 
 ---
 

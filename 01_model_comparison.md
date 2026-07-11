@@ -31,6 +31,7 @@
 | GLM 5.2 | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1-cut.png) [glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) | ![glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2-cut.png) [glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png)|
 | Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1-cut.png) [kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2-cut.png) [mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)|
 | DeepSeek V4 Pro | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1-cut.png) [deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2-cut.png) [deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
+
 ###시스템프롬프트 유저프롬프트
 - 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02](./02_system_design.md) 참조)
 

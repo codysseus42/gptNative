@@ -15,18 +15,20 @@
 
 2026년 상반기(4~6월) 동세대 플래그십 3종, 연구소당 1개.
 
-**제외 근거**
-- Kimi K2.7 Code: 최신이지만 코드 특화 튜닝 — 한국어 업무 문서 과업과 성격 불일치.
-- GPT-OSS 120B/20B: 2025-08 출시로 세대 불일치(약 10개월 차).
-- Llama 3.3 등 2024~25년 모델: 동일 사유.
-
 ## 2. 실험 환경
 
-- 채널: OpenRouter Playground (전 모델 동일. Server Tools — Web Search/Fetch, Fusion, Advisor, Subagent 등 — 전체 Off: 규칙 1(외부 출처 미사용) 충돌 방지, 환각 문항 무력화 방지, 단일 모델 응답 순수성 확보)
+- 채널: [Together ai Playground](https://api.together.ai/playground) (전 모델 동일. )
 - 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02](./02_system_design.md) 참조)
-- 실행일: 2026-07-__
+- 실행일: 2026-07-10
 
-### 실행 설정값 (Together AI 예비 실행 → OpenRouter 본 실행 공통 원칙)
+### 실행 설정값 (Together AI)
+
+![glm5.2 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/glmsetting_v1-1) ![glm5.2 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/glmsetting_v1-2)
+![kimi실행파라메터1](./testLogsAndData/scrennshotsEnvironment/kimisetting_v1-1) ![kimi 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/kimisetting_v1-2)
+![deepseek 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/deepseeksetting_v1-1) ![deepseek 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/deepseeksetting_v1-2)
+
+#### 추정값(Open Router)
+
 
 | 설정 항목 | 설명 | 설정값 | 이유 |
 | --- | --- | --- | --- |

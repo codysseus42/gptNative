@@ -23,9 +23,9 @@
 
 ### 실행 설정값 (Together AI)
 
-![glm5.2 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/glmsetting_v1-1.png) ![glm5.2 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/glmsetting_v1-2.png)
-![kimi실행파라메터1](./testLogsAndData/scrennshotsEnvironment/kimisetting_v1-1.png) ![kimi 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/kimisetting_v1-2.png)
-![deepseek 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/deepseeksetting_v1-1.png) ![deepseek 실행파라메터1](./testLogsAndData/scrennshotsEnvironment/deepseeksetting_v1-2.png)
+![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png)
+![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) ![kimi 실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)
+![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png)
 
 #### 추정값(Open Router)
 

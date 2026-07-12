@@ -59,7 +59,7 @@ gpt에게 일 제대로 시키기 abc
 | 모델 비교 (3종 이상) | [01_model_comparison.md](./01_model_comparison.md) |비교에 사용한 동일 입력 |
 | 비교 평가축(4개) | [01_model_comparison.md](./01_model_comparison.md) |평가축(점수표) |
 | 비교 모델별 점수(1~5) | [01_model_comparison.md](./01_model_comparison.md) | 평가축(점수표)|
-| 비교 근거 | [01_model_comparison.md](./01_model_comparison.md) | 모델별 결과 요약|
+| 비교 근거 | [01_model_comparison.md](./01_model_comparison.md) | 평가축(점수표)|
 | 최종 선정 결론(3줄이상) | [01_model_comparison.md](./01_model_comparison.md) | 최종 선정 근거|
 | 과업 선택 문제정의 | [02_system_design.md](./02_system_design.md) | 문제정의 |
 |타겟사용자| [02_system_design.md](./02_system_design.md) | 타겟사용자 |

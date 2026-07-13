@@ -79,14 +79,14 @@ Presence Penalty 0
 Frequency Penalty 0
 
 딥시크 질문
-```
+
 <details>
 <summary>추론 </summary>
 
 We need to interpret the user's query: "how can I know your topk minp top p value". This looks like they're asking about sampling parameters used in language model generation: top-k, min-p, top-p (nucleus sampling). They want to know my values for these parameters. I need to clarify that I'm an AI model, possibly DeepSeek, but I don't have specific public disclosure of my exact sampling parameters. However, I can explain what these parameters are and typical defaults for DeepSeek models, if known. The user is asking "how can I know your topk minp top p value" – perhaps they're trying to understand how I generate responses. I should respond helpfully, explaining that as an AI assistant, I might not have those exact values publicly stated, but I can describe typical defaults or how they work. I'll craft a friendly explanation, mentioning that for DeepSeek models, typical settings might be used, like top_p=0.9, temperature, etc., but exact values may not be disclosed. I'll also note that they can adjust these parameters via the API if they're using the model directly. I'll keep it mellow and informative.
 
 </details>
-```
+
 ```
 Ah, I see what you’re asking — you’re curious about the **sampling parameters** that control how I generate responses: **top‑k**, **min‑p**, **top‑p (nucleus sampling)**, and maybe temperature.
 

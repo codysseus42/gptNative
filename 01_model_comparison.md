@@ -17,7 +17,7 @@
 2026년 상반기(4~6월) 동세대 플래그십 3종, 연구소당 1개.
 
 ## 2. 비교에 사용한 동일한 입력
-###실행환경
+### 실행환경
 - 채널: [Together ai Playground](https://api.together.ai/playground) (전 모델 동일. )
 	 세 모델모두 중국 오픈웨이트 모델을 직접 호스팅 하는 togetherAI에서 제공하는 버전을 사용하였습니다.
 	 제3자가 제공하는 모델을 이용하는 편이 원본 서비스보다 개인정보문제나 
@@ -135,8 +135,15 @@ So, short version: you can’t “read” them from me directly, but if you’re
 
 Let me know if you want a quick rundown on what each parameter does — happy to keep it mellow and simple 🌿
 ```
-###시스템프롬프트 유저프롬프트
-- 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02_system_design.md](./02_system_design.md) 참조)
+### 시스템프롬프트 유저프롬프트
+-  시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02_system_design.md](./02_system_design.md) 참조)
+<details>
+<summary>시스템프롬프트 </summary>
+
+```
+We need to interpret the user's query: "how can I know your topk minp top p value". This looks like they're asking about sampling parameters used in language model generation: top-k, min-p, top-p (nucleus sampling). They want to know my values for these parameters. I need to clarify that I'm an AI model, possibly DeepSeek, but I don't have specific public disclosure of my exact sampling parameters. However, I can explain what these parameters are and typical defaults for DeepSeek models, if known. The user is asking "how can I know your topk minp top p value" – perhaps they're trying to understand how I generate responses. I should respond helpfully, explaining that as an AI assistant, I might not have those exact values publicly stated, but I can describe typical defaults or how they work. I'll craft a friendly explanation, mentioning that for DeepSeek models, typical settings might be used, like top_p=0.9, temperature, etc., but exact values may not be disclosed. I'll also note that they can adjust these parameters via the API if they're using the model directly. I'll keep it mellow and informative.
+```
+</details>
 
 
 ## 3. 실험 절차 (전 모델 동일 대본)

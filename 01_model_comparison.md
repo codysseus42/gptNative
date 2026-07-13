@@ -26,15 +26,12 @@
 - 실행일: 2026-07-10
 
 ### 실행 설정값 (Together AI)
-*together AI가 디폴트 파라메터 값을 제공하지 않았기 때문에
+*together AI가 디폴트 파라메터 값을 제공하지 않았기 때문에 실행 환경에서 값을 그대로 제시합니다. UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
 | 모델 | Max Tokens,Temperature | 기타 파라메터 |
 | --- | --- | --- |
 | GLM 5.2 | ![glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1-cut.png) [glm5.2 실행파라메터1](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-1.png) | ![glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2-cut.png) [glm5.2 실행파라메터2](./testLogsAndData/screenshotsEnvironment/glmsetting_v1-2.png)|
 | Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1-cut.png) [kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2-cut.png) [mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)|
 | DeepSeek V4 Pro | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1-cut.png) [deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2-cut.png) [deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
-
-###시스템프롬프트 유저프롬프트
-- 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02_system_design.md](./02_system_design.md) 참조)
 
 #### 파라메터 설명
 | 설정 항목 | 설명 | 설정값 | 이유 |
@@ -46,6 +43,72 @@
 | Response Format | JSON 스키마 강제 또는 자유 형식 | Text | 프롬프트 <출력형식> 준수 능력 자체가 평가 대상이므로 강제 구조화 배제 |
 | Top P / Min P / Top K | 토큰 후보 샘플링 제어 | 기본값 | Temperature 고정으로 무작위성은 통제됨 — 추가 조정은 변수만 증가 |
 | Repetition / Presence / Frequency Penalty | 반복·신규 주제 페널티 (-2.0~2.0) | 기본값 | 페널티 반응이 모델별로 달라 비교 오염 요인 |
+
+#### 파라메터 추정치
+together AI[문서](https://docs.together.ai/docs/inference/chat/para)에서 정확한 기본값을 찾지 못했지만 추정할 수. 있는 값들은 다음과 같습니다.-모델별 허깅페이스에서 값을 찾을 수 있다고 하지만 해당 허깅페이스에 접근이 허용 되지 않았습니다.
+UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
+Max Tokens : 65536(세팅값)
+Temperature:0.3(세팅값)
+Top P:1.0
+Min P: 문서에 없음
+Top K 0 or unset
+Repetition Penalty:1
+Presence Penalty:0
+Frequency Penalty:0
+
+해당플레이 그라운드 그래픽으로 부터(세팅값 제외)
+UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
+Max Tokens : 65536(세팅값)
+Temperature:0.3(세팅값)
+Top P:0.95
+Min P:0
+Top K 50
+Repetition Penalty:1
+Presence Penalty:0
+Frequency Penalty:0
+
+Openrouter 기본값(세팅값 제외)
+Max Tokens : 65536(세팅값)
+Temperature:0.3(세팅값)
+Top P:1.0
+Min P:0
+Top K:0
+Top_A:0
+Repetition Penalty 1
+Presence Penalty 0
+Frequency Penalty 0
+
+딥시크 질문
+```
+<details>
+<summary>추론 </summary>
+
+We need to interpret the user's query: "how can I know your topk minp top p value". This looks like they're asking about sampling parameters used in language model generation: top-k, min-p, top-p (nucleus sampling). They want to know my values for these parameters. I need to clarify that I'm an AI model, possibly DeepSeek, but I don't have specific public disclosure of my exact sampling parameters. However, I can explain what these parameters are and typical defaults for DeepSeek models, if known. The user is asking "how can I know your topk minp top p value" – perhaps they're trying to understand how I generate responses. I should respond helpfully, explaining that as an AI assistant, I might not have those exact values publicly stated, but I can describe typical defaults or how they work. I'll craft a friendly explanation, mentioning that for DeepSeek models, typical settings might be used, like top_p=0.9, temperature, etc., but exact values may not be disclosed. I'll also note that they can adjust these parameters via the API if they're using the model directly. I'll keep it mellow and informative.
+
+</details>
+```
+```
+Ah, I see what you’re asking — you’re curious about the **sampling parameters** that control how I generate responses: **top‑k**, **min‑p**, **top‑p (nucleus sampling)**, and maybe temperature.
+
+These are settings that the developers choose when running a model like me. They aren’t something I “think” about consciously — they’re just part of the generation algorithm. And unfortunately, the exact numbers aren’t always publicly listed for the version of me you’re chatting with right now.
+
+However, here’s what I can tell you:
+
+- Many DeepSeek deployments (like the API or the web chat) use something like:
+  - **temperature = 0.0–1.0** (often adjustable)
+  - **top_p = 0.9** (common for nucleus sampling)
+  - **top_k = 50** (or sometimes not used at all, depending on the setup)
+  - **min_p** is less common in older setups, but if used, might be around 0.05–0.1
+
+If you’re using the **DeepSeek API** directly, you can often pass these parameters in your request and see what defaults the documentation suggests. For the chat interface, the exact values are tuned by the team for smooth, creative, but coherent replies.
+
+So, short version: you can’t “read” them from me directly, but if you’re technically inclined, you can check the API docs or even experiment with different values yourself to see how they change the output.
+
+Let me know if you want a quick rundown on what each parameter does — happy to keep it mellow and simple 🌿
+```
+###시스템프롬프트 유저프롬프트
+- 시스템 프롬프트: [systemprompt_v1.md](./systemprompt_v1.md) (v1 고정 — v2 개선은 선정 모델에만 적용, [02_system_design.md](./02_system_design.md) 참조)
+
 
 ## 3. 실험 절차 (전 모델 동일 대본)
 

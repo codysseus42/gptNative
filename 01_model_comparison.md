@@ -55,16 +55,21 @@
 | **Top A** | Together 문서에 항목 없음. OpenRouter 정의: 최고 확률 토큰 대비 상대적 최소 확률 — 예: 0.1이면 최고 확률의 1/10 미만인 토큰은 제외 0.0~1.0.— Top P의 동적 버전에 가깝다는 설명 | 미설정 | 실험 채널(Together AI Playground)에 노출된 항목이 아니어서 관여하지 않음 |
 
 #### 파라메터 추정치
-together AI[문서](https://docs.together.ai/docs/inference/chat/para)에서 정확한 기본값을 찾지 못했지만 추정할 수. 있는 값들은 다음과 같습니다.-모델별 허깅페이스에서 값을 찾을 수 있다고 하지만 해당 허깅페이스에 접근이 허용 되지 않았습니다.
-UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
-Max Tokens : 65536(세팅값)
-Temperature:0.3(세팅값)
-Top P:1.0
-Min P: 문서에 없음
-Top K 0 or unset
-Repetition Penalty:1
-Presence Penalty:0
-Frequency Penalty:0
+
+together AI[문서](https://docs.together.ai/docs/inference/chat/para)에서 정확한 기본값을 찾지 못했지만 보통 아래와 같은 기본값들을 가진다고  합니다. 문서에서는 모델별 허깅페이스에서 값을 찾을 수 있다고 하지만 해당 허깅페이스에 접근이 허용 되지 않았습니다.)
+
+미설정(UNSET)은 말 그대로 전달이 안될 가능성도 있습니다.
+
+ + Max Tokens : 65536(세팅값)
+ + Temperature:0.3(세팅값)
+ + Top P:1.0
+ + Min P: 문서에 없음
+ + Top K 0 or unset
+ + Repetition Penalty:1
+ + Presence Penalty:0
+ + Frequency Penalty:0
+ 
+ 그 밖에 추정 할 수 있는 단서에서 추정한 값입니다.
 
 ##### 해당플레이 그라운드 그래픽으로 부터(세팅값 제외)
 
@@ -97,8 +102,11 @@ UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
 + Presence Penalty 0
 + Frequency Penalty 0
 
-딥시크 질문
+#####딥시크 질문
 
+```
+how can I know your topk minp top p value
+```
 <details>
 <summary>추론 </summary>
 
@@ -107,6 +115,7 @@ We need to interpret the user's query: "how can I know your topk minp top p valu
 ```
 </details>
 
+답변
 ```
 Ah, I see what you’re asking — you’re curious about the **sampling parameters** that control how I generate responses: **top‑k**, **min‑p**, **top‑p (nucleus sampling)**, and maybe temperature.
 

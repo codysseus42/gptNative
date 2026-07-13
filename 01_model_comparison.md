@@ -102,7 +102,7 @@ UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
 + Presence Penalty 0
 + Frequency Penalty 0
 
-#####딥시크 질문
+##### 딥시크 질문
 
 ```
 how can I know your topk minp top p value

@@ -31,7 +31,7 @@
 | Kimi K2.6 | ![kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1-cut.png) [kimi실행파라메터1](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-1.png) | ![mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2-cut.png) [mimi 실행파라메터2](./testLogsAndData/screenshotsEnvironment/kimisetting_v1-2.png)|
 | DeepSeek V4 Pro | ![deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1-cut.png) [deepseek 실행파라메터1](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-1.png) | ![deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2-cut.png) [deepseek 실행파라메터2](./testLogsAndData/screenshotsEnvironment/deepseeksetting_v1-2.png) |
 
-#### 파라메터 설정
+#### 환경 설정
 | 설정 항목 | 설명 | 설정값 | 이유 |
 | --- | --- | --- | --- |
 | Max Tokens | 출력 최대 토큰 수 (1~262,144) | 65536 | 추론 트레이스 포함 출력이 상한에 잘리지 않도록 확보. 예비 실행에서 16,384 초과(추론 폭주) 관측 후 상향 |
@@ -39,19 +39,19 @@
 | Safety Model | 별도 모더레이션 모델 (추가 요금) | None | 추가 비용 방지, 출력 개입 변수 제거 |
 | Reasoning | 추론 강도 설정 | 미지정(모델 기본값) | 모델별 지원 단계·기본 상태가 달라 특정 값 강제 시 불공정 — "출고 기본 상태"로 통일. 모델 간 기본 on/off 차이는 §5-3에 기재 |
 | Response Format | JSON 스키마 강제 또는 자유 형식 | Text | 프롬프트 <출력형식> 준수 능력 자체가 평가 대상이므로 강제 구조화 배제 |
-| Top P / Min P / Top K | 토큰 후보 샘플링 제어 | 기본값 | Temperature 고정으로 무작위성은 통제됨 — 추가 조정은 변수만 증가 |
-| Repetition / Presence / Frequency Penalty | 반복·신규 주제 페널티 (-2.0~2.0) | 기본값 | 페널티 반응이 모델별로 달라 비교 오염 요인 |
-#### 파라메터 설명
+| Top P / Min P / Top K | 토큰 후보 샘플링 제어 | 미지정(모델 기본값) | Temperature 고정으로 무작위성은 통제됨 — 추가 조정은 변수만 증가 |
+| Repetition / Presence / Frequency Penalty | 반복·신규 주제 페널티 (-2.0~2.0) | 미지정(모델 기본값) | 페널티 반응이 모델별로 달라 비교 오염 요인 |
+#### Sampling 파라메터 설정
 | 설정 항목 | Together 문서 설명 (요약) | 설정값 | 설정 이유 |
 | --- | --- | --- | --- |
 | **Max Tokens** | 응답에서 모델이 생성할 수 있는 최대 토큰 수. 값이 작으면 응답이 빠르지만 문장 중간에 잘릴 위험이 있음 | 65536 | 추론(reasoning) 트레이스를 포함한 출력이 상한에 걸려 잘리지 않도록 확보. 예비 실행에서 16,384 초과(추론 폭주) 관측 후 상향 |
 | **Temperature** | 응답의 무작위성을 조절하는 값. 0이면 항상 확률이 가장 높은 토큰을 선택(결정적), 1에 가까울수록 다양성 증가. 추출·분류처럼 정답이 하나인 과업은 낮게, 브레인스토밍 등은 높게 권장 | 0.3 (전 모델 고정) | 실행 간 편차를 줄여 1회 실행 비교의 재현성을 확보. 업무 문서 생성은 "정답이 있는" 과업에 가깝다는 문서의 권고와도 일치 |
-| **Top P** | 누적 확률이 P를 넘는 최소 토큰 집합에서만 샘플링(nucleus sampling). Temperature의 더 부드러운 대안 — 문서는 Top P와 Temperature 중 하나만 조정할 것을 권장(둘 다 건드리면 상호작용 예측이 어려움) | 1.0 (기본값) | Temperature를 이미 조정했으므로 Top P는 기본값(무제한)으로 두어 후보 집합을 추가로 좁히지 않음 — 문서가 권고하는 "둘 중 하나만" 원칙 |
+| **Top P** | 누적 확률이 P를 넘는 최소 토큰 집합에서만 샘플링(nucleus sampling). Temperature의 더 부드러운 대안 — 문서는 Top P와 Temperature 중 하나만 조정할 것을 권장(둘 다 건드리면 상호작용 예측이 어려움) | 미설정 | Temperature를 이미 조정했으므로 Top P는 기본값(무제한)으로 두어 후보 집합을 추가로 좁히지 않음 — 문서가 권고하는 "둘 중 하나만" 원칙 |
 | **Min P** | Together 문서에 항목 없음. (OpenRouter 정의: 최고 확률 토큰 대비 상대적 최소 확률 — 예: 0.1이면 최고 확률의 1/10 미만인 토큰은 제외) | 미설정 | 실험 채널(Together AI Playground)에 노출된 항목이 아니어서 관여하지 않음 |
-| **Top K** | 다음 토큰 후보를 상위 K개로 제한. 1이면 항상 최고 확률 토큰만 선택(그리디). 기본값은 비활성화(전체 후보 고려) | 0 (미설정/비활성화) | Top P와 마찬가지로 "Top K·Top P 중 하나만" 권고에 따라 미사용 — Temperature로 무작위성을 이미 통제 |
+| **Top K** | 다음 토큰 후보를 상위 K개로 제한. 1이면 항상 최고 확률 토큰만 선택(그리디). 기본값은 비활성화(전체 후보 고려) | 미설정 | Top P와 마찬가지로 "Top K·Top P 중 하나만" 권고에 따라 미사용 — Temperature로 무작위성을 이미 통제 |
 | **Repetition Penalty** | 프롬프트·응답에 이미 등장한 토큰의 확률을 낮춤. 1.0 초과면 반복 억제, 미만이면 반복 조장. 문서는 모델이 같은 구절을 반복(루프)할 때만 1.1 정도로 살짝 올릴 것을 권장 | 1.0 (기본값) | 루프·반복 현상이 목적적으로 관측되지 않았고, 과도한 값은 문서가 경고하듯 유창성을 해칠 수 있어 기본값 유지 |
-| **Presence Penalty** | 응답에 이미 등장한 토큰 자체를 낮은 확률로 만듦(횟수와 무관, 등장 여부만 반영). 새로운 주제·어휘로 유도할 때 사용 | 0.0 (기본값) | 업무 문서는 같은 용어(고객명·규정 번호 등)를 반복 지칭해야 하므로, 새 주제로 밀어내는 페널티는 오히려 역효과 |
-| **Frequency Penalty** | 응답 내 등장 "빈도"에 비례해 페널티 부여(Repetition Penalty보다 세밀한 반복 억제). 목록·요약·코드처럼 장문에서 축자적 반복을 줄일 때 사용 | 0.0 (기본값) | 페널티 반응이 모델별로 달라 비교 오염 요인이 되고, 6섹션 제안서는 형식상 유사 문구 반복(규정 번호·마커 등)이 정상 구조이므로 억제 대상이 아님 |
+| **Presence Penalty** | 응답에 이미 등장한 토큰 자체를 낮은 확률로 만듦(횟수와 무관, 등장 여부만 반영). 새로운 주제·어휘로 유도할 때 사용 | 미설정 | 업무 문서는 같은 용어(고객명·규정 번호 등)를 반복 지칭해야 하므로, 새 주제로 밀어내는 페널티는 오히려 역효과 |
+| **Frequency Penalty** | 응답 내 등장 "빈도"에 비례해 페널티 부여(Repetition Penalty보다 세밀한 반복 억제). 목록·요약·코드처럼 장문에서 축자적 반복을 줄일 때 사용 | 미설정 | 페널티 반응이 모델별로 달라 비교 오염 요인이 되고, 6섹션 제안서는 형식상 유사 문구 반복(규정 번호·마커 등)이 정상 구조이므로 억제 대상이 아님 |
 | **Top A** | Together 문서에 항목 없음. OpenRouter 정의: 최고 확률 토큰 대비 상대적 최소 확률 — 예: 0.1이면 최고 확률의 1/10 미만인 토큰은 제외 0.0~1.0.— Top P의 동적 버전에 가깝다는 설명 | 미설정 | 실험 채널(Together AI Playground)에 노출된 항목이 아니어서 관여하지 않음 |
 
 #### 파라메터 추정치

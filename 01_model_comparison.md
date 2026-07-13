@@ -60,12 +60,19 @@ Frequency Penalty:0
 UNSET은 말 그대로 전달이 안될 가능성도 있습니다.
 
  -Max Tokens : 65536(세팅값)
+ 
 -Temperature:0.3(세팅값)
+
 -Top P:0.95
+
 -Min P:0
+
 -Top K 50
+
 -Repetition Penalty:1
+
 -Presence Penalty:0
+
 -Frequency Penalty:0
 
 Openrouter 기본값(세팅값 제외)

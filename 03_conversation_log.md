@@ -767,39 +767,84 @@ A고객님께,
 > 각 턴의 봇 출력 원문과 플레이그라운드 지표(tps / 입력토큰 / 출력토큰 / 응답시간)를 기록한다.
 
 ### 턴 1~2: 입력 → 확인질문
+```
+<클레임 개요> 커피머신 작동 불량, 전액 환불 및 배송비 요구 </클레임 개요>
+<고객클레임 원문>
+지난 3월에 구매한 커피머신이 전원이 켜지지 않습니다. 정상적으로 사용했는데 벌써 고장이라니 이해할 수 없습니다.
+전액 환불과 왕복 배송비를 요구합니다. 처리되지 않으면 소비자원에 신고하겠습니다. 최고객 드림.
+</고객클레임 원문>
+<경위와 사실관계>
+1. 2026-03-15 온라인몰에서 커피머신 구매(구매가 32만원, 무상보증 12개월).
+2. 2026-06-30 작동 불량 접수, 7-02 서비스센터 입고.
+3. 7-04 서비스센터 상담원이 유선으로 "내부 석회질(스케일) 축적 확인 — 관리 소홀 가능성"이라고 전달함.
+4. 공식 검사확인서는 미수령 상태(발급 요청, 2~3일 내 도착 예정).
+5. 고객은 정상 사용을 주장하며 관리 소홀을 부인.
+6. 답변은 오늘 중 발송해야 함.
+</경위와 사실관계>
+<회사규정>
+[환불·교환 규정]
+3-1. 무상보증 기간 내 제조 결함은 전액 환불 또는 신품 교환한다.
+3-2. 소비자 관리 소홀(스케일 미제거·임의분해·침수 등)로 인한 고장은 환불 대상에서 제외하며, 유상수리를 안내한다.
+3-3. 과실 여부에 다툼이 있는 경우 공식 검사 결과에 따라 판정한다.
+3-4. 사용 기간에 따른 보상액 산정 시 구매가에서 사용 1개월당 2.5%를 감가한다.
+</회사규정>
+<고객호칭> 고객님 </고객호칭>
+<기타호칭> 발송자=고객만족센터 </기타호칭>
+<고객답변말투> 정중하되 원칙적으로 </고객답변말투>
+```
+
 <details>
 <summary>추론(Reason) </summary>
 
 ```
-We need to interpret the user's query: "how can I know your topk minp top p value". This looks like they're asking about sampling parameters used in language model generation: top-k, min-p, top-p (nucleus sampling). They want to know my values for these parameters. I need to clarify that I'm an AI model, possibly DeepSeek, but I don't have specific public disclosure of my exact sampling parameters. However, I can explain what these parameters are and typical defaults for DeepSeek models, if known. The user is asking "how can I know your topk minp top p value" – perhaps they're trying to understand how I generate responses. I should respond helpfully, explaining that as an AI assistant, I might not have those exact values publicly stated, but I can describe typical defaults or how they work. I'll craft a friendly explanation, mentioning that for DeepSeek models, typical settings might be used, like top_p=0.9, temperature, etc., but exact values may not be disclosed. I'll also note that they can adjust these parameters via the API if they're using the model directly. I'll keep it mellow and informative.
+Let me analyze this input carefully following the system prompt's procedures.
+**<제안서 생성 절차> 적용:**
+**Step 1: 필수 항목 점검**
+- <고객클레임 원문> ✓ 있음
+- <경위와 사실관계> ✓ 있음
+- <유저의견> ✗ 없음 — 필수 항목 누락!
+- <회사규정> ✓ 있음 (규정 적용 시 필수)
+<유저의견>이 필수인데 누락되어 있습니다. 따라서 여기서 중단하고 확인 질문을 해야 합니다.
+또한 <확인질문규칙>이 없으므로, 클레임처리GPT의 판단에 따라 확인 질문을 할 수 있습니다.
+**Step 2: 모순·모호·오류 점검**
+- 공식 검사확인서 미수령 상태 — 핵심 판정 근거가 미확보
+- 서비스센터 유선 소견(스케일 축적, 관리 소홀 가능성) vs 고객 주장(정상 사용, 관리 소홀 부인) — 충돌
+- 답변 오늘 중 발송 필요 — 시간 제약
+하지만 먼저 <유저의견>이 없으므로 이것부터 확인해야 합니다.
+<유저의견>이 필수인데 없으므로, 제안서 생성 절차 Step 1에서 중단하고 확인 질문을 출력합니다.
+또한 <확인질문규칙>이 없으므로, 확인 질문을 자유롭게 할 수 있습니다. 공식 검사확인서 미수령 문제도 확인해야 합니다.
+필수 항목 누락(<유저의견>)과 핵심 미확인 사항(공식 검사확인서)을 묶어서 1회 확인 질문으로 출력합니다.
+Let me also check: <고객 관계>, <참고자료>, <고객답변말투>는 선택이므로 없어도 됩니다. <고객답변말투>는 있네요.
+필수 항목 중 <유저의견>만 누락되었습니다. 이것을 확인 질문으로 물어봐야 합니다.
+동시에, 공식 검사확인서 미수령 상태도 확인 질문에 포함시키는 것이 좋겠습니다. 하지만 <유저의견>이 없으면 제안서를 만들 수 없으므로, 이것이 최우선입니다.
+확인 질문을 작성하겠습니다.
 ```
 </details>
 
 답변
 ```
-Ah, I see what you’re asking — you’re curious about the **sampling parameters** that control how I generate responses: **top‑k**, **min‑p**, **top‑p (nucleus sampling)**, and maybe temperature.
+입력해주신 내용을 확인했습니다. 제안서 생성 전 확인이 필요한 사항이 있습니다.
 
-These are settings that the developers choose when running a model like me. They aren’t something I “think” about consciously — they’re just part of the generation algorithm. And unfortunately, the exact numbers aren’t always publicly listed for the version of me you’re chatting with right now.
+**1. 담당자님의 처리 방침 (필수)**
+제안서 작성에 반드시 필요합니다. 현재 확인된 정보를 바탕으로, 아래와 같은 방향성을 생각하고 계신지 확인해 주세요.
 
-However, here’s what I can tell you:
+- 스케일 축적이 공식 검사로 확인될 경우: 규정 3-2에 따라 환불 거부·유상수리 안내?
+- 스케일이 확인되지 않을 경우: 규정 3-1에 따라 전액 환불 또는 신품 교환?
+- 오늘 발송해야 하는 답변의 성격: 공식 검사확인서 도착 전이므로 "중간 안내"로 먼저 보내고, 결과 확정 후 최종 처리를 안내하는 방향이신지요?
 
-- Many DeepSeek deployments (like the API or the web chat) use something like:
-  - **temperature = 0.0–1.0** (often adjustable)
-  - **top_p = 0.9** (common for nucleus sampling)
-  - **top_k = 50** (or sometimes not used at all, depending on the setup)
-  - **min_p** is less common in older setups, but if used, might be around 0.05–0.1
+**2. 공식 검사확인서 (확인)**
+서비스센터 유선 전달 단계에서 "스케일 축적 — 관리 소홀 가능성"이라고 하셨는데, 공식 검사확인서는 2~3일 내 도착 예정으로 이해했습니다. 확인서 도착 전에 오늘 발송해야 하는 상황이 맞으시다면, 답변은 확정 문구가 아닌 "조사 중·결과 확정 후 안내" 성격으로 작성하게 됩니다. 이 방향으로 진행하셔도 괜찮으신지요?
 
-If you’re using the **DeepSeek API** directly, you can often pass these parameters in your request and see what defaults the documentation suggests. For the chat interface, the exact values are tuned by the team for smooth, creative, but coherent replies.
+**3. 감가상각 관련 (참고 확인)**
+규정 3-4에 사용 기간에 따른 감가(1개월당 2.5%)가 명시되어 있습니다. 구매일(3/15)부터 현재까지 약 3.5개월이 경과했으므로, 만약 환불로 전환 시 감가 적용 여부도 방침에 포함해 주시면 반영하겠습니다.
 
-So, short version: you can’t “read” them from me directly, but if you’re technically inclined, you can check the API docs or even experiment with different values yourself to see how they change the output.
-
-Let me know if you want a quick rundown on what each parameter does — happy to keep it mellow and simple 🌿
+담당자님의 처리 방침과 위 확인 사항에 대한 답변을 주시면 제안서를 생성하겠습니다.
 ```
 
 
 (봇 출력 원문)
 
-지표: __ tps / 입력 __ / 출력 __ / __ ms
+지표: 116 tps / 입력 17901 / 출력 1211 / 10429 ms
 
 ### 턴 3~4: 표준 답변 → 제안서 1 생성
 

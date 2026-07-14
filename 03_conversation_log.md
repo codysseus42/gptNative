@@ -1042,7 +1042,8 @@ One more thing - I should check if there are any issues with my proposal:
 4. 사측 권고 조치 - 조건부 권고, 유저의견 부합
 5. 우려 내용 - 자기검토
 6. 발송 전 담당자 확인사항 - 체크리스트
-I think this is complete. Let me output it.```
+I think this is complete. Let me output it.
+```
 </details>
 
 답변

@@ -127,7 +127,7 @@ The number of tokens used for the input of the request:15866
 The number of tokens returned by the model:2714
 Total latency time for this inference request:40836 ms
 
-# 제안서 1 — 커피머신 환불 요구 건 (스케일 다툼)
+# 제안서 1 — 커피머신 환불 요구 건 (스케일 다툼)0.52
 
 ⚠ 본 제안서는 확인 제약으로 일부 핵심 전제를 미확인 가정한 상태에서 작성되었습니다.
    · 제약 사유: 공식 검사확인서 미수령 — 판정의 핵심 근거(규정 3-3)가 확보되지 않았습니다.

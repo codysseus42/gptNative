@@ -44,7 +44,7 @@
 
 <details>
 <summary>입력과업 템플릿 프롬프트</summary>
-```
+``` 
 
 <입력요소와 템플릿>
   - 상담·확인질문 답변·수정요구는 평문으로 들어온다.
@@ -149,7 +149,7 @@
 ### 프롬프트 전문
 
 <details open>
-<summary>systemprompt v2 전문 (현행 — v1 + 생성/수정 절차 2종)</summary>
+<summary>**systemprompt v2 전문 (현행 — v1 + 생성/수정 절차 2종)**</summary>
 
 ````text
 지금부터 각 줄에서 '//' 뒤에 나오는 말들은 프롬프트를 설명하는 주석이니 철저히 무시하라.

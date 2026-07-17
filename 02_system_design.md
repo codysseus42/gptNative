@@ -42,7 +42,7 @@
 
 <details>
 <summary>입력과업 템플릿 프롬프트</summary>
-````text
+```text
 	
 ...
 
@@ -92,7 +92,7 @@
 
 ...
 
-````
+```
 
 </details>
 

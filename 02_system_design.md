@@ -1961,6 +1961,145 @@ A고객님께,
 <고객답변말투> 정중하되 원칙적으로 </고객답변말투>
 ```
 </details>   
+
+<details>
+<summary> v1 2턴 a1 추론 </summary>
+
+```text
+
+Let me analyze this input carefully.
+The user has provided a claim about a coffee machine that won't turn on. Let me check the required elements:
+- <클레임 개요> - provided (선택)
+- <고객클레임 원문> - provided (필수) ✓
+- <경위와 사실관계> - provided (필수) ✓
+- <고객 관계> - not provided (선택)
+- <회사규정> - provided (규정 적용 시 필수) ✓
+- <참고자료> - not provided (선택)
+- <유저의견> - NOT provided (필수) ✗
+- <고객호칭> - provided (선택)
+- <기타호칭> - provided (선택)
+- <고객답변말투> - provided (선택)
+- <확인질문규칙> - not provided (선택)
+The critical missing element is <유저의견> which is 필수 (required). The user hasn't provided their opinion on the appropriate response direction.
+Also, there are some important facts to consider:
+1. The purchase was made on 2026-03-15, and the claim was filed on 2026-06-30 - this is within the 12-month warranty period.
+2. The service center reported "scale buildup - possible maintenance neglect" via phone, but the official inspection report hasn't been received yet.
+3. The customer denies maintenance neglect and claims normal use.
+4. The response needs to be sent today.
+5. There's a conflict between the service center's preliminary finding (scale buildup suggesting maintenance neglect) and the customer's claim (normal use).
+Per 규칙 2: "제안서 생성 전, 필수 입력 결령·모호한 부분·모순/논리적 모순은 반드시 확인 질문합니다."
+The missing <유저의견> is a 필수 항목, so I must ask about it before generating the proposal.
+Also, per 규칙 3: "대화·상담 내용을 종합해 작성할 때는, 아직 확인받지 못한 내용과 최종 방침·취지를 반드시 확인합니다."
+Let me also note the similarities to 답변예시3 - there's a similar situation where the official inspection report hasn't been received yet, and the response needs to go out today. However, in this case, there's no <확인질문규칙> limiting confirmation questions, and <유저의견> is missing entirely.
+I should:
+1. Note that <유저의견> is missing (필수 항목)
+2. Ask about the user's intended response direction
+3. Also note the key uncertainty: the official inspection report hasn't been received, similar to 예시3
+Let me also check - the template hasn't been introduced yet in this conversation. Let me check the conditions:
+- "유저가 즉시 제안서 생성을 요구한 경우가 아니고" - The user hasn't explicitly requested immediate generation, but they've provided most of the template elements...
+- "필수 요소가 아직 채워지지 않았으며" - Yes, <유저의견> is missing
+- "이 형식을 아직 안내하지 않았다면" - The user seems to already know the format since they're using the template tags
+Actually, looking more carefully, the user has provided most elements in the template format already, so they clearly know the format. The template guidance condition says "이 형식을 아직 안내하지 않았다면" - since the user is already using the format, I don't need to introduce it.
+But I do need to:
+1. Ask for <유저의견> (필수)
+2. Note the key issue about the official inspection report not being received yet
+Let me draft my response:
+I should ask for the user's opinion on how to handle this, and also flag the key uncertainty about the inspection report.
+Actually, let me re-read the rules more carefully:
+규칙 2: "제안서 생성 전, 필수 입력 결여·모호한 부분·모순/논리적 모순은 반드시 확인 질문합니다."
+So I must ask about:
+1. <유저의견> is missing - this is 필수
+2. The official inspection report hasn't been received - this is a key uncertainty
+3. The customer's claim (normal use) conflicts with the service center's preliminary finding (scale buildup) - this is a potential 모순
+Let me also think about whether I should ask about <고객 관계> - it's 선택 so I shouldn't require it.
+I should also note the 감가상각 issue - the product was purchased on 3/15 and the issue was reported on 6/30, so it's been about 3.5 months. If a refund is processed, 규정 3-4 would apply (2.5% per month of use). But this depends on whether it's a manufacturing defect or consumer negligence.
+Let me draft my response:
+I need to:
+1. Acknowledge the input
+2. Note that <유저의견> is missing (필수)
+3. Ask about the user's intended response direction
+4. Flag the key uncertainty about the inspection report
+5. Note the conflict between customer claim and service center finding
+Let me write this in Korean with 존댓말 and 사무적태도.
+```
+</details>   
+
+<details>
+<summary>v1 2턴 a1 답변</summary>
+
+```text
+
+입력 내용 확인했습니다. 제안서 작성 전 확인이 필요한 사항이 있습니다.
+
+**필수 항목 누락**
+- <유저의견>이 누락되어 있습니다. 담당자님께서 생각하시는 적절한 대응 방향(환불 수용·거부 여부, 유상수리 안내, 조건부 처리 등)을 알려주셔야 제안서를 작성할 수 있습니다.
+
+**확인 질문**
+
+1. **처리 방침**: 스케일 축적이 공식 확인될 경우 규정 3-2(관리 소홀→환불 제외·유상수리)로 대응하실 예정이신지요? 반대로 제조 결함으로 확인될 경우 규정 3-1(전액 환불 또는 신품 교환)로 처리하실지, 방침을 알려주십시오.
+
+2. **공식 검사확인서 미수령 상태에서 오늘 발송**: 현재 석회질 소견은 유선 전달 단계이고 공식 검사확인서는 2~3일 후 도착 예정입니다. 오늘 발송해야 하는 답변을 (a) 검사 결과 확정 전 중간 안내로 보낼지, (b) 아니면 유선 소견을 기준으로 잠정 결론을 내어 발송할지, 어느 방향을 원하시는지요.
+
+3. **왕복 배송비**: 고객이 왕복 배송비를 요구하고 있으나, 제공해주신 규정에는 배송비 부담 기준이 없습니다. 배송비 처리와 관련한 사내 규정이나 판매 약관이 있으신지요?
+
+위 사항 확인해주시면 제안서를 생성하겠습니다.
+```
+</details>
+
++ 지표: 78 tps / 입력토큰 16267 / 출력토큰 1714 / 21882 ms
+
+<details>
+<summary>v2 2턴 a1 추론</summary>
+
+```text
+Let me analyze this input carefully following the system prompt's procedures.
+**<제안서 생성 절차> 적용:**
+**Step 1: 필수 항목 점검**
+- <고객클레임 원문> ✓ 있음
+- <경위와 사실관계> ✓ 있음
+- <유저의견> ✗ 없음 — 필수 항목 누락!
+- <회사규정> ✓ 있음 (규정 적용 시 필수)
+<유저의견>이 필수인데 누락되어 있습니다. 따라서 여기서 중단하고 확인 질문을 해야 합니다.
+또한 <확인질문규칙>이 없으므로, 클레임처리GPT의 판단에 따라 확인 질문을 할 수 있습니다.
+**Step 2: 모순·모호·오류 점검**
+- 공식 검사확인서 미수령 상태 — 핵심 판정 근거가 미확보
+- 서비스센터 유선 소견(스케일 축적, 관리 소홀 가능성) vs 고객 주장(정상 사용, 관리 소홀 부인) — 충돌
+- 답변 오늘 중 발송 필요 — 시간 제약
+하지만 먼저 <유저의견>이 없으므로 이것부터 확인해야 합니다.
+<유저의견>이 필수인데 없으므로, 제안서 생성 절차 Step 1에서 중단하고 확인 질문을 출력합니다.
+또한 <확인질문규칙>이 없으므로, 확인 질문을 자유롭게 할 수 있습니다. 공식 검사확인서 미수령 문제도 확인해야 합니다.
+필수 항목 누락(<유저의견>)과 핵심 미확인 사항(공식 검사확인서)을 묶어서 1회 확인 질문으로 출력합니다.
+Let me also check: <고객 관계>, <참고자료>, <고객답변말투>는 선택이므로 없어도 됩니다. <고객답변말투>는 있네요.
+필수 항목 중 <유저의견>만 누락되었습니다. 이것을 확인 질문으로 물어봐야 합니다.
+동시에, 공식 검사확인서 미수령 상태도 확인 질문에 포함시키는 것이 좋겠습니다. 하지만 <유저의견>이 없으면 제안서를 만들 수 없으므로, 이것이 최우선입니다.
+확인 질문을 작성하겠습니다.
+```
+</details>
+
+<details>
+<summary>v2 2턴 a1 답변</summary>
+
+```text
+입력해주신 내용을 확인했습니다. 제안서 생성 전 확인이 필요한 사항이 있습니다.
+
+**1. 담당자님의 처리 방침 (필수)**
+제안서 작성에 반드시 필요합니다. 현재 확인된 정보를 바탕으로, 아래와 같은 방향성을 생각하고 계신지 확인해 주세요.
+
+- 스케일 축적이 공식 검사로 확인될 경우: 규정 3-2에 따라 환불 거부·유상수리 안내?
+- 스케일이 확인되지 않을 경우: 규정 3-1에 따라 전액 환불 또는 신품 교환?
+- 오늘 발송해야 하는 답변의 성격: 공식 검사확인서 도착 전이므로 "중간 안내"로 먼저 보내고, 결과 확정 후 최종 처리를 안내하는 방향이신지요?
+
+**2. 공식 검사확인서 (확인)**
+서비스센터 유선 전달 단계에서 "스케일 축적 — 관리 소홀 가능성"이라고 하셨는데, 공식 검사확인서는 2~3일 내 도착 예정으로 이해했습니다. 확인서 도착 전에 오늘 발송해야 하는 상황이 맞으시다면, 답변은 확정 문구가 아닌 "조사 중·결과 확정 후 안내" 성격으로 작성하게 됩니다. 이 방향으로 진행하셔도 괜찮으신지요?
+
+**3. 감가상각 관련 (참고 확인)**
+규정 3-4에 사용 기간에 따른 감가(1개월당 2.5%)가 명시되어 있습니다. 구매일(3/15)부터 현재까지 약 3.5개월이 경과했으므로, 만약 환불로 전환 시 감가 적용 여부도 방침에 포함해 주시면 반영하겠습니다.
+
+담당자님의 처리 방침과 위 확인 사항에 대한 답변을 주시면 제안서를 생성하겠습니다.
+```
+</details>
+
++ 지표: 116 tps / 입력토큰 17901 / 출력토큰 1211 / 10429 ms
    
 2. **최초 생성의 병목이 풀렸습니다.** v1의 최대 문제 턴이었던 턴4(110초)가 54.5초로 절반이 됐고, Max Tokens 상향 전 발생했던 출력 잘림 리스크의 원인(무계획 장고)이 절차로 대체됐습니다.
 

@@ -84,9 +84,9 @@ gpt에게 일 제대로 시키기 abc
 |조건변경/추가정보제공 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문 |
 |문맥유지 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문 |
 | 문제 지점과 개선 요약 | [03_conversation_log.md](./03_conversation_log.md) | 문제 지점과 개선 요약 (v2→v3 개선)  |
-|모델/환경 기록, 무료 버전 제한점| [03_conversation_log.md](./03_conversation_log.md) | 비교에 사용한 동일 입력 ,10턴 이상 대화 전문 |
+|모델/환경 기록, 무료 버전 제한점|[01_model_comparison.md](./01_model_comparison.md)| 비교에 사용한 동일 입력|
 | 안전/윤리 개인정보,폭력/선정적 콘텐츠,사실/정책/수치 포함된 답변 근거/확인 필요 | [03_conversation_log.md](./03_conversation_log.md) | 시스템 프롬프트  |
-| 제출문 편집 섹션/번호/요약,원본첨부 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문  |
+| 제출문 편집 섹션/번호/요약,원본첨부 | 03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문  |
 | 보너스2-멀티모달 확장 결과의 시각화| [bonusImage](./bonus2) |이미지들 |
 ---
 

@@ -104,6 +104,9 @@
 | Top P / Min P / Top K | 토큰 후보 샘플링 제어 | 기본값 | Temperature 고정으로 무작위성은 통제됨 — 추가 조정은 변수만 증가 |
 | Repetition / Presence / Frequency Penalty | 반복·신규 주제 페널티 (-2.0~2.0) | 기본값 | 페널티 반응이 모델별로 달라 비교 오염 요인 |
 
+![glm5.2 실행파라메터1](./v2LogRawAndData/glmsetting_v2-1.png) [glm5.2 실행파라메터1](./v2LogRawAndData/glmsetting_v2-1.png)
+![glm5.2 실행파라메터2](./v2LogRawAndData/glmsetting_v2-2.png) [glm5.2 실행파라메터2](./v2LogRawAndData/glmsetting_v2-2.png)
+
 #### 시스템 프롬프트 V2
 <details>
 <summary>시스템프롬프트 V2 </summary>

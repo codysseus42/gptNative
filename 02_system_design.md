@@ -1845,7 +1845,7 @@ A고객님께,
 ```
 
 
-전체 대화와 맥락은 [v2](./03_conversation_log.md)  참조.
+전체 대화와 맥락은 [03_conversation_log.md](./03_conversation_log.md)  참조.
 
 ## 8. 개선이력 (v1→v2 개선 — 단계적 추론 유도)
 

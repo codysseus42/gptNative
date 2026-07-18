@@ -1915,7 +1915,7 @@ A고객님께,
 >동일 대본·동일 설정으로 v1과 v2(최종)를 비교한 결과입니다.
  + [v2데이터](./v2LogRawAndData/glm5.2_test_log_v2.md) 
  + [v1데이터](./testLogsAndData/glm5.2_test_v1.md)
-<detail>
+<details>
 <summary>1턴 q1 입력 </summary>
 
 ```text

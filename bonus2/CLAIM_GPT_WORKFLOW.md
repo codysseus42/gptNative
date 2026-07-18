@@ -1445,4 +1445,42 @@ CS운영팀 드림
 Mermaid flowchart를 이미지로 생성해줘
 
 # A3
+
+flowchart TD
+    subgraph 담당자
+        T1["T1 👤 입력 제출 (유저의견 고의 누락)"]
+        T3["T3 👤 방침 회신 (과실 단정 말고 중간 안내)"]
+        T5["T5 👤 환각 검증 5문항 질의 (개정 여부/감가/단정 가부/등급·이력/배송비)"]
+        T7["T7 👤 검사확인서 도착(관리 소홀 확정)<br>+ 확인답변 + 호칭 변경 → 수정 요청"]
+        T9["T9 👤 어조 수정 요청 (단호하게, 나머지 동결)"]
+    end
+
+    subgraph 클레임처리GPT
+        T2["T2 🤖 필수항목(유저의견) 누락 감지<br>→ 확인 질문 출력 (생성 보류)"]
+        T4["T4 🤖 제안서[1] 생성<br>🚨 검사확인서 미수령으로 경고 발동<br>[확인필요]·[추측]·[내용모순] 마커 삽입"]
+        T6["T6 🤖 5문항 방어<br>(모름·계산·확정거부·미제공·규정공백)"]
+        T8["T8 🤖 제안서[1-1] 생성<br>✅ 마커 해소 및 경고 제거<br>(확정 안내로 전환)"]
+        T10["T10 🤖 제안서[1-2] 생성<br>(어조만 변경, 확정사항 유지)"]
+    end
+
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+    T4 --> T5
+    T5 --> T6
+    T6 --> T7
+    T7 --> T8
+    T8 --> T9
+    T9 --> T10
+
+    classDef warning fill:#ffe6e6,stroke:#ff3333,stroke-width:2px;
+    classDef resolved fill:#e6ffe6,stroke:#33cc33,stroke-width:2px;
+    
+    class T4 warning;
+    class T8 resolved;
+
+# Q4
+이미지로 생성해줄래?
+
+# A4
 ![COFFEE_CLAIM_WORKFLOW](./COFFEE_CLAIM_WORKFLOW.png)

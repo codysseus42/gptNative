@@ -1960,12 +1960,13 @@ A고객님께,
 <고객호칭> 고객님 </고객호칭>
 <기타호칭> 발송자=고객만족센터 </기타호칭>
 <고객답변말투> 정중하되 원칙적으로 </고객답변말투>
-   ```
+```
 </details>
 
 <details>
 <summary>v1 2턴 a1 추론</summary>
 ```text
+
 Let me analyze this input carefully.
 The user has provided a claim about a coffee machine that won't turn on. Let me check the required elements:
 - <클레임 개요> - provided (선택)

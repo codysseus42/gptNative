@@ -1185,7 +1185,7 @@ A고객님께,
 
 <details>
 <summary>템플릿 입출력</summary>
-```
+```text
 
 ...
 
@@ -1289,13 +1289,11 @@ A고객님께서 겪으신 번거로움을 무겁게 받아들이고 있으며, 
 ...
 
 ```
-
-
 </details>
 
 <details>
 <summary>멀티텀 상담후 출력</summary>
-```
+```text
 
 ...
 
@@ -1436,7 +1434,7 @@ B호텔 서비스지원팀 드림
 
 <details>
 <summary>확인질문 제약 경고마커 출력</summary>
-```
+```text
 
 ...
 

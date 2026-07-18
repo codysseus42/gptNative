@@ -1938,7 +1938,8 @@ A고객님께,
 <details>
 <summary>1턴 q1 입력</summary>
 ```text
-   <클레임 개요> 커피머신 작동 불량, 전액 환불 및 배송비 요구 </클레임 개요>
+
+<클레임 개요> 커피머신 작동 불량, 전액 환불 및 배송비 요구 </클레임 개요>
 <고객클레임 원문>
 지난 3월에 구매한 커피머신이 전원이 켜지지 않습니다. 정상적으로 사용했는데 벌써 고장이라니 이해할 수 없습니다.
 전액 환불과 왕복 배송비를 요구합니다. 처리되지 않으면 소비자원에 신고하겠습니다. 최고객 드림.
@@ -1967,6 +1968,7 @@ A고객님께,
 <details>
 <summary> v1 2턴 a1 추론 </summary>
 ```text
+
 Let me analyze this input carefully.
 The user has provided a claim about a coffee machine that won't turn on. Let me check the required elements:
 - <클레임 개요> - provided (선택)

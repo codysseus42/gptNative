@@ -1915,7 +1915,10 @@ A고객님께,
 >동일 대본·동일 설정으로 v1과 v2(최종)를 비교한 결과입니다.
  + [v2데이터](./v2LogRawAndData/glm5.2_test_log_v2.md) 
  + [v1데이터](./testLogsAndData/glm5.2_test_v1.md)
-<details>
+ 
+ <details>
+ <summary>데이터</summary>
+ <details>
 <summary>1턴 q1 입력 </summary>
 
 ```text
@@ -2634,6 +2637,7 @@ A고객님께,
 
 + 지표: 141 tps / 입력토큰 18559 / 출력토큰 7665 / 54526 ms
 
+ </details>
 
 | 턴 (성격) | 출력 토큰 v1→v2 | 변화 | 지연 v1→v2 | 변화 |
 | --- | --- | --- | --- | --- |

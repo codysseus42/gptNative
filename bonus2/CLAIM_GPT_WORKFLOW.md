@@ -595,4 +595,4 @@ flowchart TD
 이미지로 생성해줄래?
     
 # A2
-![CLAIM_GPT_WORKFLOW](./bonus2/CLAIM_GPT_WORKFLOW.png)
+![CLAIM_GPT_WORKFLOW](./CLAIM_GPT_WORKFLOW.png)

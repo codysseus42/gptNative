@@ -1966,7 +1966,6 @@ A고객님께,
 <details>
 <summary>v1 2턴 a1 추론</summary>
 ```text
-
 Let me analyze this input carefully.
 The user has provided a claim about a coffee machine that won't turn on. Let me check the required elements:
 - <클레임 개요> - provided (선택)
@@ -2025,8 +2024,9 @@ Let me write this in Korean with 존댓말 and 사무적태도.
 </details>   
 
 <details>
-<summary>v1 2턴 a1 답변/summary>
+<summary>v1 2턴 a1 답변</summary>
 ```text
+
 입력 내용 확인했습니다. 제안서 작성 전 확인이 필요한 사항이 있습니다.
 
 **필수 항목 누락**

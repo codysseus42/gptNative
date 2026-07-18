@@ -551,7 +551,7 @@ A고객님께,
 
 </시스템프롬프트>
 
-A1
+# A1
 flowchart TD
     subgraph 담당자
         U_Input["입력: 템플릿 제출 또는 평문 상담"]
@@ -590,9 +590,9 @@ flowchart TD
     U_Review -- "수정 요청" --> B_Regenerate
     B_Regenerate --> U_Review
     U_Review -- "최종 승인" --> U_End
+        
+# Q2
+이미지로 생성해줄래?
     
-    # Q2
-    이미지로 생성해줄래?
-    
-    # A2
-    ![CLAIM_GPT_WORKFLOW](CLAIM_GPT_WORKFLOW.png)
+# A2
+![CLAIM_GPT_WORKFLOW](./bonus2/CLAIM_GPT_WORKFLOW.png)

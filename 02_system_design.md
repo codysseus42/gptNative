@@ -1937,7 +1937,7 @@ A고객님께,
    
 <details>
 <summary>1턴 q1 입력</summary>
-   ```text
+```text
    <클레임 개요> 커피머신 작동 불량, 전액 환불 및 배송비 요구 </클레임 개요>
 <고객클레임 원문>
 지난 3월에 구매한 커피머신이 전원이 켜지지 않습니다. 정상적으로 사용했는데 벌써 고장이라니 이해할 수 없습니다.
@@ -1966,7 +1966,7 @@ A고객님께,
 
 <details>
 <summary> v1 2턴 a1 추론 </summary>
-   ```text
+```text
 Let me analyze this input carefully.
 The user has provided a claim about a coffee machine that won't turn on. Let me check the required elements:
 - <클레임 개요> - provided (선택)
@@ -2026,7 +2026,7 @@ Let me write this in Korean with 존댓말 and 사무적태도.
 
 <details>
 <summary>v1 2턴 a1 답변</summary>
-```
+```text
 
 입력 내용 확인했습니다. 제안서 작성 전 확인이 필요한 사항이 있습니다.
 

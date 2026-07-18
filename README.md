@@ -26,7 +26,6 @@ gpt에게 일 제대로 시키기 abc
 ### 타겟 사용자
 
 - CS/고객관계 담당자 (클레임 1차 대응)
-- 고객만족팀 관리자 (답변 발송 승인)
 
 ### 입력 / 출력
 
@@ -41,7 +40,7 @@ gpt에게 일 제대로 시키기 abc
 
 | 문서 | 내용 | 바로가기 |
 | --- | --- | --- |
-| `01_model_comparison.md` | 후보 모델 4종 비교(동일 대본 10턴 실측) · 환각 검증 5문항 · 비용 산출 · 최종 선정 근거 · 심층 인터뷰 | [01_model_comparison.md](./01_model_comparison.md) |
+| `01_model_comparison.md` | 후보 모델 4종 비교(동일 대본 10턴 실측) · 환각 검증 5문항 · 비용 산출 · 최종 선정 근거  | [01_model_comparison.md](./01_model_comparison.md) |
 | `02_system_design.md` | 시스템 프롬프트 설계 의도 · 입력 템플릿 · Few-shot 예시 3종 · 되묻기(확인질문) 설계 · v1→v2 개선 | [02_system_design.md](./02_system_design.md) |
 | `03_conversation_log.md` | 선정 모델 실행 로그(10턴+) · 조건 변경 2회(내용/어조) 반영 검증 | [03_conversation_log.md](./03_conversation_log.md) |
 
@@ -57,7 +56,7 @@ gpt에게 일 제대로 시키기 abc
 | 모델 비교 (3종 이상) | [01_model_comparison.md](./01_model_comparison.md) | 비교목적 |
 | 비교 대상 모델명 | [01_model_comparison.md](./01_model_comparison.md) |비교목적 |
 | 모델 비교 (3종 이상) | [01_model_comparison.md](./01_model_comparison.md) |비교에 사용한 동일 입력 |
-| 비교 평가축(4개) | [01_model_comparison.md](./01_model_comparison.md) |평가축(점수표) |
+| 비교 평가축(4개이상) | [01_model_comparison.md](./01_model_comparison.md) |평가축(점수표) |
 | 비교 모델별 점수(1~5) | [01_model_comparison.md](./01_model_comparison.md) | 평가축(점수표)|
 | 비교 근거 | [01_model_comparison.md](./01_model_comparison.md) | 평가축(점수표)|
 | 최종 선정 결론(3줄이상) | [01_model_comparison.md](./01_model_comparison.md) | 최종 선정 근거|
@@ -80,13 +79,13 @@ gpt에게 일 제대로 시키기 abc
 |합격기준 기대정답/허용오차/참고 근거 | [02_system_design.md](./02_system_design.md) | 환각 검증 설계 |
 | 단계적 추론 유도 적용 | [02_system_design.md](./02_system_design.md) | 개선이력 (v1→v2 개선) |
 | 시나리오 설명 | [03_conversation_log.md](./03_conversation_log.md) | 시나리오 설명 |
+| 안전/윤리 개인정보,폭력/선정적 콘텐츠,사실/정책/수치 포함된 답변 근거/확인 필요 | [02_system_design.md](./02_system_design.md) | 시스템 프롬프트  |
 | 10턴 이상 대화 전문 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문 |
 |조건변경/추가정보제공 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문 |
 |문맥유지 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문 |
-| 문제 지점과 개선 요약 | [03_conversation_log.md](./03_conversation_log.md) | 문제 지점과 개선 요약 (v2→v3 개선)  |
-|모델/환경 기록, 무료 버전 제한점|[01_model_comparison.md](./01_model_comparison.md)| 비교에 사용한 동일 입력|
-| 안전/윤리 개인정보,폭력/선정적 콘텐츠,사실/정책/수치 포함된 답변 근거/확인 필요 | [03_conversation_log.md](./03_conversation_log.md) | 시스템 프롬프트  |
-| 제출문 편집 섹션/번호/요약,원본첨부 | 03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문  |
+| 문제 지점과 개선 요약 | [03_conversation_log.md](./03_conversation_log.md) | 문제 지점과 개선 요약 (v1→v1.5->v3 개선)  |
+|모델/환경 기록, 무료 버전 제한점|[01_model_comparison.md](./01_model_comparison.md),[03_conversation_log.md](./03_conversation_log.md)| 비교에 사용한 동일 입력,시나리오 설명|
+| 제출문 편집 섹션/번호/요약,원본첨부 | [03_conversation_log.md](./03_conversation_log.md) | 10턴 이상 대화 전문,추가(로그)  |
 | 보너스2-멀티모달 확장 결과의 시각화| [bonusImage](./bonus2) |이미지들 |
 ---
 

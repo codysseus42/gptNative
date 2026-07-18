@@ -1859,7 +1859,7 @@ A고객님께,
 
 <details open>
 <summary>v2 신설 절차 전문 (v1에는 없는 부분)</summary>
-```text
+    ```text
 
 ...
 
